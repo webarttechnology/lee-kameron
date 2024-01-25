@@ -5,7 +5,19 @@
  
 }
 @media screen and (max-width: 991px) {
-    
+    .newsPic img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .e_video {
+        width: 100%;
+        max-width: 100%;
+        float: left;
+        margin: 0 0 15px 0;
+    }
+    .grid .grid-item {
+        width: 33.333%;
+    }
 }
 @media screen and (max-width:767px) {
     .bannerPart {
@@ -35,7 +47,56 @@
     .entertainment .swiper-button-next {
         right: -50px !important;
     }
-    
+    .bannerPart.innerBanner .row {
+        height: 100px !important;
+    }
+    .breadcrumb {
+        font-size: 80%;
+        color: var(--bs-white);
+        justify-content: center;
+    }
+    .newsPic img {
+        height:auto; width: 100% !important;
+    }
+    .newsBox .newsPic {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    footer {
+        padding: 30px 0 0;
+        color: var(--light-gray);
+    }
+    footer p {
+        margin: 0px 0 10px;
+    }
+    footer h5 {
+        margin-bottom: 10px; margin-top: 15px;
+    }
+    h1 {
+        font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1920 - 300)));
+        font-family: 'Orbitron';
+    }
+    .newsDetails blockquote {
+        padding: 15px 20px !important;
+        margin: 15px 0 15px 0;
+        font-size: 1.2rem !important;
+    }
+    .newsDetails blockquote p {
+        margin: 0;
+        line-height: 1.4;
+    }
+    .tab-content.mt-4 {
+        margin-top: 1rem!important;
+    }
+    .press .galleryimg {
+        margin-bottom: 0;
+    }
+    .grid .grid-item {
+        width: 50%;
+    }
+    .filters ul {
+        margin: 15px 0;
+    }
 }
 @media screen and (max-width:667px) {
     header {
@@ -48,7 +109,7 @@
         font-size: calc(22px + (35 - 22) * ((100vw - 300px) / (1920 - 300))); font-family:'Orbitron';
     }
     body {
-        padding-left: 60px;
+        padding-left: 72px;
     }
     .video_banner .row {
         height: auto;
@@ -86,5 +147,15 @@
         left: 0;
         margin: 0 auto;
         bottom: -60px;
+    }
+    .filters ul li {
+        margin-right: 0px;
+        padding: 0 6px 8px 6px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:575px) {
+    .grid .grid-item {
+        width: 100%;
     }
 }

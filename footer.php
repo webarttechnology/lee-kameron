@@ -65,6 +65,24 @@
 
         });
     </script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        var $grid = $('.grid').isotope({
+        // options
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows',
+        });
+
+        // change is-checked class on buttons
+        var $buttonGroup = $('.filters');
+        $buttonGroup.on( 'click', 'li', function( event ) {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        var $button = $( event.currentTarget );
+        $button.addClass('is-checked');
+        var filterValue = $button.attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+        });
+    </script>
     
     <script src="js/script.js"></script>
 </body>
